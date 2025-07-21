@@ -25,7 +25,6 @@ class SerwerSMS extends NotificationProvider {
                 "sender": notification.serwersmsSenderName,
             };
 
-            // **CHANGED:** Now uses notification.destinationType and notification.destinationValue directly
             if (notification.destinationType === "group") {
                 data.group_id = notification.destinationValue;
             } else if (notification.destinationType === "phone") {
